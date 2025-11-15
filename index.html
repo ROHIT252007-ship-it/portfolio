@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio Navbar</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Navbar -->
+
+  <nav class="container">
+    <div class="logo">
+      <span>Rohit</span>
+      <span>Mahajan</span>
+    </div>
+
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Skills</a></li>
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">Contact Us</a></li>
+      <li><a href="#">Projects</a></li>
+      <li><a href="#">Resume</a></li>
+      <button class="hire-btn">Hire Me</button>
+    </ul>
+
+    <button class="hamburger" id="menu-btn">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="white" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="#">Home</a>
+    <a href="#">Skills</a>
+    <a href="#">About Us</a>
+    <a href="#">Contact Us</a>
+    <a href="#">Projects</a>
+    <a href="#">Resume</a>
+    <button class="hire-btn">Hire Me</button>
+  </div>
+
+  <!-- Hero Section -->
+  <main class="container">
+    <section class="hero">
+      <div class="h-left">
+        <p class="hi">Hi,I am</p>
+        <p class="son"><span>Rohit Mahajan</span></p>
+        <div class="typing-container">
+          <span>I am&nbsp;</span>
+          <span id="text" style="color:#ea580c ;"></span>
+          <span class="cursor">|</span>
+        </div>
+        <div class="h-text">
+          <p>
+            “I enjoy coding, creating projects, and finding simple solutions to problems.”
+          </p>
+          <p>
+            Let’s work together to create something amazing!</p>
+        </div>
+        <div class="btns">
+          <button type="button" class="btn1">Hire Me</button>
+          <button type="button" class="btn2">View Projects</button>
+        </div>
+      </div>
+      <div class="h-right">
+        <div class="parent">
+          <!-- IMAGE BOX -->
+          <div class="image-box">
+            <img src="./my-removebg-preview.png" alt="My Image">
+          </div>
+          <!-- BOX under Image -->
+          <div class="content-box">
+            rojti
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <section class="about-me">
+      <div class="am">About Me</div>
+      <div class="ams">Full-Stack Developer • Designer • App Developer</div>
+      <div class="about-box">
+        <div class="wia">Who I am ?</div>
+        <div class="ampare">Hi, I am <span>Rohit Mahajan</span>.I’m currently pursuing B.Sc.IT (Semester 3) at
+          <span>Shree Ramkrishna Institute of Computer
+            Science</span>. I have a strong interest in <span>Full-stack development</span>, especially using
+          <span>React Native</span> for <span>mobile</span> apps and
+          <span>Node.js</span> with<span> Express.js</span> for backend APIs. I’ve already built basic applications and
+          APIs, which has helped me
+          understand real-world development workflows.
+          <br>
+          Along with coding, I enjoy designing user interfaces. That’s why I’m learning <span>Figma</span> and <span>
+            Canva</span> to improve my
+          UI/UX design skills. I love creating clean, modern designs and building projects that look great and work
+          smoothly.
+        </div>
+        <div>
+
+
+          <div class="wid">What I do ?</div>
+          <div class="whdtext">
+            <ul>
+              <li>Full-Stack Web Development (Frontend + Backend)
+              </li>
+              <li>Mobile App Development (React Native / Flutter learning)
+              </li>
+              <li>UI/UX Design, Wireframes & Interactive Prototypes(Figma)</li>
+
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
