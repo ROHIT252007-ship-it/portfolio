@@ -372,6 +372,54 @@ nav {
   margin-left: 30px;
 }
 
+.skills{
+  margin-top: 100px;
+}
+.skillls{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 30px;
+  margin: 50px;
+}
+.skill{
+  border-radius: 40px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transition: 0.4s;
+   background:conic-gradient(#0c0a09 0deg, #0c0a09 0deg);
+}
+.skill:hover{
+  box-shadow: 10px 10px 20px #545353;
+}
+.inner{
+  background: #0c0a09;
+  height: 97%;
+  width: 97%;
+   display: flex;
+   flex-direction: column;
+   gap: 5px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 40px 0px;
+  padding: 20px;
+}
+
+svg{
+  font-size: 150px;
+  color: #e0560b;
+}
+
+.sname{
+  font-size: 25px;
+  font-weight: 900;
+}
+.spre{
+    font-size: 20px;
+  font-weight: 800;
+  visibility: hidden;
+}
 @keyframes blink {
 
   0%,
@@ -426,6 +474,41 @@ nav {
   .btns {
     justify-content: center ;
   }
+
+  .about-me{
+    margin-top: 120px;
+  }
+  .about-box{
+    margin-top: 40px;
+    width: 95%;
+    margin: 25px;
+  }
+  .skillls{
+  display: grid;
+  grid-template-columns: repeat(3,250px);
+  gap: 30px;
+  margin: 50px;
+  justify-content: center;
+}
+.inner{
+  gap: 4px;
+}
+.sname{
+  font-size: 20px;
+}
+.spre{
+  font-size: 20px;
+
+}
+svg{
+  width:100px;
+}
+.inner div img{
+  width: 150px;
+}
+
+
+  
 }
 
 @media (max-width: 768px) {
@@ -459,6 +542,33 @@ nav {
   .btns {
     justify-content: center ;
   }
+   .skillls{
+  display: grid;
+  grid-template-columns: repeat(3,180px);
+  gap: 30px;
+  margin: 50px;
+  justify-content: center;
+}
+.inner{
+  gap: 3px;
+  padding: 10px;
+}
+.sname{
+  font-size: 18px;
+}
+.spre{
+  font-size: 18px;
+
+}
+svg{
+  width:80px;
+  height: 70px;
+}
+.inner div img{
+  width:80px;
+  height: 70px;
+}
+
 }
 
 
@@ -500,5 +610,45 @@ nav {
   .btns {
     justify-content: center ;
   }
-  
+
+  .wia,.wid{
+    font-size: 25px;
+  }
+  .ampare ,.whdtext{
+    font-size: 10px;
+  }
+  .about-me{
+    margin-top: 25px;
+  }
+  .about-box{
+    margin-top: 40px;
+    width: 95%;
+    margin: 10px;
+  }
+ .skillls{
+  display: grid;
+  grid-template-columns: repeat(3,100px);
+  gap: 10px;
+  margin: 50px;
+  justify-content: center;
+}
+.inner{
+  gap: 3px;
+  padding: 10px;
+}
+.sname{
+  font-size: 8px;
+}
+.spre{
+  font-size: 10px;
+
+}
+svg{
+  width:40px;
+  height: 50px;
+}
+.inner div img{
+  width:40px;
+  height: 50px;
+}
 }
