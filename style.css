@@ -265,7 +265,6 @@ nav {
 
 .parent {
   position: relative;
-  
   height: 480px;
   width: 100%;
   display: flex;
@@ -279,7 +278,6 @@ nav {
   height: auto;       
   overflow: hidden;
   position: absolute;
-  top: 20px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 10;
@@ -299,7 +297,7 @@ nav {
   background: #ea580c;
   border-radius: 0px 50px 0px 50px;
   position: absolute;
-  top: 190px;
+  top: 144px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 1;
@@ -315,7 +313,7 @@ nav {
 
 
 .about-me{
-  margin-top: 250px;
+  margin-top: 130px;
 }
 
 .am{
@@ -323,12 +321,14 @@ nav {
   font-weight: 900;
   color: #ea580c;
   text-decoration:underline;
+  text-align: center;
 }
 
 .ams{
   margin-top: 5px;
   font-size: 15px;
   margin-left: 2px;
+  text-align: center;
 }
 .about-box{
   width: 100%;
@@ -420,6 +420,102 @@ svg{
   font-weight: 800;
   visibility: hidden;
 }
+.projects{
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+
+}
+.project{
+  width: 1000px;
+  background: #464646;
+  border: 3px solid#787878;
+  padding: 10px;
+  border-radius: 30px ;
+  position: sticky;
+  top: 20px;
+}
+.proname{
+  color: #ea580c;
+  font-weight: 900;
+  font-size: 30px;
+  text-align: center;
+  padding: 5px 0px;
+}
+.proinfo{
+  width: 100%;
+  height: 300px;
+  display: grid;
+  grid-template-columns: repeat(2,45%);
+ justify-content: center;
+ gap: 15px;
+}
+.pc-left{
+  display: flex;
+  align-items: center;
+  justify-content: center
+  
+}
+.pc-left img{
+  width: 90%;
+  border:5px solid #f4eded;
+  border-radius: 20px;
+}
+
+.pc-right{
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+  padding: 20px;
+}
+
+.pdic{
+  font-weight: 700;
+  line-height: 1.4;
+  color: #a5a4a3;
+}
+.plan{
+}
+.plan ul{
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap:8px;
+}
+
+.plan ul li{
+  background: #e0560b;
+  padding: 5px 10px;
+  border: 2px solid #000;
+  border-radius: 16px;
+  font-size: 15px;
+}
+
+.view-btn a{
+  text-decoration: none;
+  color: #e0560b;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @keyframes blink {
 
   0%,
@@ -431,6 +527,10 @@ svg{
     opacity: 0;
   }
 }
+
+
+
+
 
 
 /* Responsive */
@@ -507,6 +607,12 @@ svg{
   width: 150px;
 }
 
+.project{
+  width: 700px;
+}
+.pc-left img {
+    width: 98%;
+}
 
   
 }
@@ -567,6 +673,19 @@ svg{
 .inner div img{
   width:80px;
   height: 70px;
+}
+.project{
+  padding-top: 90px;
+  width: 500px;
+  height: 560px;
+}
+.pc-left img {
+    width: 98%;
+}
+
+.proinfo{
+  display: flex;
+  flex-direction: column;
 }
 
 }
@@ -650,5 +769,26 @@ svg{
 .inner div img{
   width:40px;
   height: 50px;
+}
+
+.project{
+  padding-top: 30px;
+  width: 300px;
+height: 450px;
+}
+.pc-left img {
+    width: 98%;
+}
+
+.proinfo{
+  display: flex;
+  flex-direction: column;
+}
+.pdic{
+  font-size: 13px;
+}
+.plan ul li {
+  font-size: 13px;
+
 }
 }
