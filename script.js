@@ -38,37 +38,74 @@ function type() {
 }
 
 type();
-// Select all skill boxes
+// // Select all skill boxes
+// const skillBoxes = document.querySelectorAll(".skill");
+
+// skillBoxes.forEach((box) => {
+//   const percent = parseInt(box.dataset.value); 
+//   const textEl = box.querySelector(".spre");
+//   let animated = false;
+
+//   function animate() {
+//     let current = 0;
+
+//     const interval = setInterval(() => {
+//       current++;
+
+//       if (current > percent) {
+//         clearInterval(interval);
+//         return;
+//       }
+
+//       textEl.textContent = current + "%";
+//       box.style.background = `conic-gradient(#ea580c ${current * 3.6}deg, #0c0a09 0deg)`;
+//       textEl.style.visibility="visible";
+//     }, 15);
+//   }
+
+//   // Animation plays only once on hover
+//   box.addEventListener("mouseenter", () => {
+//     if (!animated) {
+//       animated = true;
+//       animate();
+//     }
+//   });
+
+// });
 const skillBoxes = document.querySelectorAll(".skill");
 
-skillBoxes.forEach((box) => {
-  const percent = parseInt(box.dataset.value); 
-  const textEl = box.querySelector(".spre");
-  let animated = false;
+function checkScroll() {
+  skillBoxes.forEach((box) => {
+    const percent = parseInt(box.dataset.value);
+    const textEl = box.querySelector(".spre");
 
-  function animate() {
-    let current = 0;
+    // if animation already done, skip
+    if (box.classList.contains("animated")) return;
 
-    const interval = setInterval(() => {
-      current++;
+    const rect = box.getBoundingClientRect();
 
-      if (current > percent) {
-        clearInterval(interval);
-        return;
-      }
+    // Start animation when 80px inside viewport
+    if (rect.top < window.innerHeight - 80) {
+      box.classList.add("animated");
 
-      textEl.textContent = current + "%";
-      box.style.background = `conic-gradient(#ea580c ${current * 3.6}deg, #0c0a09 0deg)`;
-      textEl.style.visibility="visible";
-    }, 15);
-  }
+      let current = 0;
+      const interval = setInterval(() => {
+        current++;
+        if (current > percent) {
+          clearInterval(interval);
+          return;
+        }
 
-  // Animation plays only once on hover
-  box.addEventListener("mouseenter", () => {
-    if (!animated) {
-      animated = true;
-      animate();
+        textEl.textContent = current + "%";
+        box.style.background = `conic-gradient(#ea580c ${current * 3.6}deg, #0c0a09 0deg)`;
+        textEl.style.visibility = "visible";
+      }, 15);
     }
   });
+}
 
-});
+// check on scroll
+window.addEventListener("scroll", checkScroll);
+
+// also check on page load (in case some items are already visible)
+window.addEventListener("load", checkScroll);

@@ -273,9 +273,18 @@ nav {
 }
 
 /* IMAGE BOX */
+/* Shared animation for image-box + content-box */
+.image-box,
+.content-box {
+  animation: slideIn 1.2s ease-out forwards,
+             floatUpDown 3s ease-in-out infinite;
+  animation-delay: 0s, 1.3s; /* float happens after slide */
+}
+
+/* IMAGE BOX */
 .image-box {
-    width: 360px;             /* Add fixed width */
-  height: auto;       
+  width: 360px;
+  height: auto;
   overflow: hidden;
   position: absolute;
   left: 50%;
@@ -286,11 +295,11 @@ nav {
 
 .image-box img {
   width: 100%;
- height: auto;     
+  height: auto;
   object-fit: cover;
 }
 
-/* TEXT BOX */
+/* CONTENT BOX */
 .content-box {
   width: 65%;
   height: 75%;
@@ -306,6 +315,27 @@ nav {
   align-items: center;
   box-shadow: rgb(151, 149, 149) 0px 0px 50px;
   bottom: 0;
+}
+
+/* --- KEYFRAMES --- */
+
+/* One-time slide from right → center */
+@keyframes slideIn {
+  0% {
+    transform: translate(calc(50% + 200px), 0);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(-50%);
+    opacity: 1;
+  }
+}
+
+/* Infinite up–down floating */
+@keyframes floatUpDown {
+  0%   { transform: translate(-50%, 0); }
+  50%  { transform: translate(-50%, -12px); }
+  100% { transform: translate(-50%, 0); }
 }
 
 
@@ -502,7 +532,123 @@ svg{
   color: #e0560b;
 }
 
+footer{
+  margin-top: 50px;
+  background-color: #ea580c;
+  box-shadow: inset  0px 0px 20px 10px red;;
+}
+.mainf{
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(2,1fr);
+  
+}
+.f-left{
+   display: flex;
+  padding: 30px;
+  justify-content: space-around;
+  
 
+}
+.f-right{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.logof {
+  display: flex;
+  align-items: center;
+  font-size: 1.8rem;
+  font-weight: 900;
+}
+.logof span:first-child {
+  color: #000000;
+}
+
+.logof span:last-child {
+  color: white;
+  margin-left: 4px;
+}
+.info{
+  line-height: 30px;
+}
+.f-tegline{
+  font-size: 15px;
+}
+.coninfo{
+  margin: 15px 0px 0px 15px;
+}
+
+.q-name{
+  font-size: 20px;
+  font-weight: 900;
+}
+.q-link ul{
+  margin: 15px 0px 0px 15px;
+  list-style: none;
+  line-height: 1.4;
+}
+.q-link ul li a{
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.email{
+  display: flex;
+align-items: center;
+gap: 5px;
+}
+.email svg{
+  width: 30px;
+  height: 30px;
+}
+.email a{
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 700;
+}
+.social{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 15px;
+
+}
+.social svg{
+  width: 30px;
+  height: 30px;
+}
+
+.cu{
+  font-size: 25px;
+  font-weight: 900;
+  margin: 10px;
+}
+form{
+  width: 75%;
+  line-height: 2;
+}
+input{
+  width: 100%;
+  height: 30px;
+}
+textarea{
+  width: 100%;
+  height: 60px;
+}
+.send{
+  width: 100%;
+  height: 30px;
+  background: #000;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+}
+label{
+  font-weight: 600;
+}
 
 
 
@@ -687,6 +833,10 @@ svg{
   display: flex;
   flex-direction: column;
 }
+.mainf{
+  display: flex;
+  flex-direction: column-reverse; 
+}
 
 }
 
@@ -790,5 +940,12 @@ height: 450px;
 .plan ul li {
   font-size: 13px;
 
+}
+.f-left{
+  flex-direction: column;
+}
+.q-link{
+  margin-top: 15px;
+  text-align: center;
 }
 }
