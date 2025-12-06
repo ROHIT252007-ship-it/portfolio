@@ -821,15 +821,18 @@ svg{
   height: 70px;
 }
 .project{
-  padding-top: 90px;
+  padding-top: 20px;
   width: 500px;
-  height: 560px;
+  height: 625px;
 }
 .pc-left img {
     width: 98%;
 }
-
+.proname{
+  margin-bottom: 130px;
+}
 .proinfo{
+  margin-top: 110PX;
   display: flex;
   flex-direction: column;
 }
@@ -924,21 +927,30 @@ svg{
 .project{
   padding-top: 30px;
   width: 300px;
-height: 450px;
+height: 540px;
 }
 .pc-left img {
     width: 98%;
 }
-
+.proname{
+  margin-bottom: -10px;
+  font-size: 22px;
+}
 .proinfo{
   display: flex;
   flex-direction: column;
+  margin-top: 80px;
 }
 .pdic{
   font-size: 13px;
 }
+.plan ul {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+}
 .plan ul li {
   font-size: 13px;
+  text-align: center;
 
 }
 .f-left{
